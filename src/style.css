@@ -1,11 +1,26 @@
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: linear-gradient(
+/* Define CSS Variables */
+:root {
+  --main-bg-color: linear-gradient(
     to right,
     rgb(134, 239, 172),
     rgb(59, 130, 246),
     rgb(147, 51, 234)
   );
+  --title-color: white;
+  --paragraph-color: grey;
+  --link-color: blue;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+
+  background-image: var(--main-bg-color);
+  color: var(--title-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
 }
