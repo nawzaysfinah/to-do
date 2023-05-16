@@ -5,7 +5,7 @@ export const blankProjectLoad = () => {
   );
   let projectsArray = [];
   console.log("Pushing the title name of project to the projectsArray...");
-  let projectTitle = "Default Project";
+  let projectTitle = "Add new task!";
   projectsArray.push({ projectTitle });
   console.log(projectsArray);
   return { projectsArray, projectTitle };
