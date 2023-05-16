@@ -7,6 +7,7 @@ export function initialdomManip() {
   // DOM for the Heading
   const heading = document.createElement("h1");
   const btn_newToDo = document.createElement("button");
+  btn_newToDo.setAttribute("id", "newToDo");
 
   btn_newToDo.textContent = "☑️";
   btn_newToDo.addEventListener("click", newToDo);
@@ -33,6 +34,7 @@ export function newToDo() {
   title.setAttribute("id", "Title");
   title.setAttribute("name", "Title");
   title.setAttribute("placeholder", "what are we doing?");
+  title.textContent = "Title";
   entryDiv.appendChild(title);
 
   // DOM for Description
@@ -40,6 +42,7 @@ export function newToDo() {
   description.setAttribute("type", "text");
   description.setAttribute("id", "Description");
   description.setAttribute("placeholder", "what's does it entail?");
+  description.textContent = "Description";
   entryDiv.appendChild(description);
 
   // DOM for Due Date
@@ -48,6 +51,7 @@ export function newToDo() {
   calendar.setAttribute("type", "datetime-local");
   calendar.setAttribute("name", "date");
   calendar.setAttribute("placeholder", "select date/time");
+  calendar.textContent = "Due Date";
   entryDiv.appendChild(calendar);
 
   // DOM for Priority
@@ -65,7 +69,43 @@ export function newToDo() {
   priority.add(high);
 
   // DOM for Checklist
+  // create button
+  var btn_addItem = document.createElement("button");
+  btn_addItem.textContent = "Add Item!";
+  btn_addItem.setAttribute("id", "addItem");
+  // create input field
+  var addInput = document.createElement("input");
+  addInput.setAttribute("type", "text");
+  addInput.setAttribute("id", "texto");
+  // create a ul for things to live in
+  var ul = document.createElement("ul");
+  ul.setAttribute("id", "ul");
+
+  entryDiv.appendChild(btn_addItem);
+  entryDiv.appendChild(addInput);
+  entryDiv.appendChild(ul);
+
+  // var ul = document.createElement("ul");
+  // entryDiv.appendChild(ul);
+
+  btn_addItem.addEventListener("click", addChecklist);
 
   // append entry entryDiv to contentDiv
   contentDiv.appendChild(entryDiv);
+}
+
+// DOM Manipulation to addCheckList
+export function addChecklist() {
+  var li = document.createElement("li");
+
+  var checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
+  checkbox.value = 1;
+  checkbox.name = "todo[]";
+
+  li.appendChild(checkbox);
+
+  var text = document.getElementById("texto");
+  li.appendChild(document.createTextNode(text.value));
+  ul.appendChild(li);
 }
