@@ -1,6 +1,6 @@
 import { createToDo } from "./create-to-do.js";
 import { blankProjectLoad } from "./blank-project-load.js";
-import { initialdomManip } from "./initial-dom-manip.js";
+import { initialdomManip } from "./dom-manip.js";
 import flatpickr from "./flatpickr.js";
 
 // Call blankProjectLoad on first land

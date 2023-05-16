@@ -30,6 +30,8 @@ button {
   display: flex;
   background-color: transparent;
   border: transparent;
+  align-items: center;
+  justify-content: center;
 }
 
 #entry {

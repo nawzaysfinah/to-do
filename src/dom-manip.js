@@ -47,12 +47,23 @@ export function newToDo() {
   var calendar = document.createElement("input");
   calendar.setAttribute("type", "datetime-local");
   calendar.setAttribute("name", "date");
-  calendar.setAttribute("class", "flatpickr js-flatpickr-dateTime");
   calendar.setAttribute("placeholder", "select date/time");
   entryDiv.appendChild(calendar);
 
   // DOM for Priority
-  // how to add selector
+  var priority = document.createElement("select");
+  priority.setAttribute("name", "priority");
+  priority.setAttribute("placeholder", "important?");
+  entryDiv.appendChild(priority);
+
+  // Options for Priority
+  let low = new Option("Low", "0");
+  priority.add(low);
+  let medium = new Option("Medium", "1");
+  priority.add(medium);
+  let high = new Option("High", "2");
+  priority.add(high);
+
   // DOM for Checklist
 
   // append entry entryDiv to contentDiv
