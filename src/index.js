@@ -16,14 +16,14 @@ const myToDo = createToDo(
   "Go get groceries",
   "6/15/2022",
   "Low",
-  "Meat,"
+  "Meat, Eggs, Bread"
 );
 const myToDo2 = createToDo(
   "Homework",
   "Do Odin Project Work",
   "6/20/2022",
   "Medium",
-  "something"
+  "Work on the To-Do List App"
 );
 console.log("Show me the properties on myToDo from index.js ...", myToDo);
 console.log("Show me the properties on myToDo2 from index.js ...", myToDo2);

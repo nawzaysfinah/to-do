@@ -1,0 +1,11 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(
+    to right,
+    rgb(134, 239, 172),
+    rgb(59, 130, 246),
+    rgb(147, 51, 234)
+  );
+}
