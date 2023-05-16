@@ -20,16 +20,41 @@ export function newToDo() {
   //   DOM for the default project load
   const entryDiv = document.createElement("div");
   entryDiv.setAttribute("id", "entry");
+
+  // DOM for Heading of entryDiv
   const projectsInfoDiv = document.createElement("h3");
   projectsInfoDiv.setAttribute("id", "projects");
+  entryDiv.appendChild(projectsInfoDiv);
 
+  // DOM for Title
   projectsInfoDiv.textContent = blankProjectLoad().projectTitle;
   var title = document.createElement("input");
   title.setAttribute("type", "text");
   title.setAttribute("id", "Title");
-  title.setAttribute("placeholder", "what's the task?");
-
-  contentDiv.appendChild(entryDiv);
-  entryDiv.appendChild(projectsInfoDiv);
+  title.setAttribute("name", "Title");
+  title.setAttribute("placeholder", "what are we doing?");
   entryDiv.appendChild(title);
+
+  // DOM for Description
+  var description = document.createElement("input");
+  description.setAttribute("type", "text");
+  description.setAttribute("id", "Description");
+  description.setAttribute("placeholder", "what's does it entail?");
+  entryDiv.appendChild(description);
+
+  // DOM for Due Date
+  // how to add calendar
+  var calendar = document.createElement("input");
+  calendar.setAttribute("type", "datetime-local");
+  calendar.setAttribute("name", "date");
+  calendar.setAttribute("class", "flatpickr js-flatpickr-dateTime");
+  calendar.setAttribute("placeholder", "select date/time");
+  entryDiv.appendChild(calendar);
+
+  // DOM for Priority
+  // how to add selector
+  // DOM for Checklist
+
+  // append entry entryDiv to contentDiv
+  contentDiv.appendChild(entryDiv);
 }
