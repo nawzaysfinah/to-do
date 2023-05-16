@@ -85,13 +85,21 @@ export function newToDo() {
   entryDiv.appendChild(addInput);
   entryDiv.appendChild(ul);
 
-  // var ul = document.createElement("ul");
-  // entryDiv.appendChild(ul);
-
   btn_addItem.addEventListener("click", addChecklist);
+
+  // add button to submit
+  var btn_submit = document.createElement("button");
+  btn_submit.textContent = "Submit";
+  btn_submit.addEventListener("click", submit);
+  entryDiv.appendChild(btn_submit);
 
   // append entry entryDiv to contentDiv
   contentDiv.appendChild(entryDiv);
+}
+
+// Function for Submit Button
+export function submit() {
+  alert("submit button works!");
 }
 
 // DOM Manipulation to addCheckList

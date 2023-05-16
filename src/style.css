@@ -34,11 +34,26 @@ body {
   justify-content: center;
 }
 
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
 #entry {
   background-color: var(--entry-background);
   padding: 20px;
   border-radius: 5px;
   display: flex;
+  /* align-items: center;
+  justify-content: center; */
   flex-direction: column;
   margin: 20px;
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
 }
