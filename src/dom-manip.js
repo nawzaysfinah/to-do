@@ -64,6 +64,8 @@ export function newToDo() {
   entryDiv.appendChild(priority);
 
   // Options for Priority
+  let placeholder = new Option("Priority?", "");
+  priority.add(placeholder);
   let low = new Option("Low", "0");
   priority.add(low);
   let medium = new Option("Medium", "1");
@@ -86,10 +88,6 @@ export function newToDo() {
   var ul = document.createElement("ul");
   ul.setAttribute("id", "ul");
 
-  // Create if/else to ensure submit works only when there is content
-  // let checkboxItem = document.querySelector("#texto").value;
-  // console.log(checkboxItem);
-
   entryDiv.appendChild(btn_addItem);
   entryDiv.appendChild(addInput);
   entryDiv.appendChild(ul);
@@ -105,22 +103,6 @@ export function newToDo() {
 
   // append entry entryDiv to contentDiv
   contentDiv.appendChild(entryDiv);
-}
-
-export function checklist() {}
-
-// Function for Submit Button
-export function submit() {
-  alert("submit button works!");
-  event.preventDefault();
-  createToDo;
-  // Reset input to null after submitting to do task
-  document.querySelector("#Title").value = null;
-  document.querySelector("#Description").value = null;
-  document.querySelector("#DueDaTe").value = null;
-  document.querySelector("Priority").value = null;
-  document.querySelector("#texto").value = null;
-  document.querySelector("li").value = null;
 }
 
 // DOM Manipulation to addCheckList
@@ -149,3 +131,22 @@ export function addChecklist() {
     checkboxItem = null;
   }
 }
+
+// Function for Submit Button
+export function submit() {
+  alert("submit button works!");
+  event.preventDefault();
+  createToDo;
+  console.log("createTodo ran...");
+  // Reset input to null after submitting to do task
+  document.querySelector("#Title").value = null;
+  document.querySelector("#Description").value = null;
+  // document.querySelector("#DueDaTe").value = null;
+  document.querySelector("#Priority").value = "";
+  // document.querySelector("#texto").value = null;
+  // document.querySelector("li").value = null;
+}
+
+// export function resetPriority() {
+//   var dropDown = document.getElementById();
+// }

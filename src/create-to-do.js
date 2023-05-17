@@ -6,17 +6,17 @@ export function createToDo(Title, Description, DueDate, Priority, Checklist) {
   // Take data from new To Do item
   console.log("Called createToDo module... creating todo now");
 
-  let title = document.querySelector("#Title").value;
-  let description = document.querySelector("#Description").value;
-  let duedate = document.querySelector("#DueDaTe").value;
-  let priority = document.querySelector("Priority").value;
-  let checklist = document.querySelector("#checkbox").value;
+  // let title = document.querySelector("#Title").value;
+  // let description = document.querySelector("#Description").value;
+  // let duedate = document.querySelector("#DueDaTe").value;
+  // let priority = document.querySelector("Priority").value;
+  // let checklist = document.querySelector("#ul").value;
 
-  Title = title;
-  Description = description;
-  DueDate = duedate;
-  Priority = priority;
-  Checklist = checklist;
+  // Title = title;
+  // Description = description;
+  // DueDate = duedate;
+  // Priority = priority;
+  // Checklist = checklist;
 
   console.log({ Title, Description, DueDate, Priority, Checklist });
   console.log("Pushing this object to the toDoArray....");
