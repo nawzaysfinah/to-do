@@ -6,16 +6,17 @@ export function createToDo(Title, Description, DueDate, Priority, Checklist) {
   // Take data from new To Do item
   console.log("Called createToDo module... creating todo now");
 
-  // let title = document.querySelector("#Title").value;
-  // let description = document.querySelector("#Description").value;
-  // let duedate = document.querySelector("#DueDaTe").value;
-  // let priority = document.querySelector("Priority").value;
+  let title = document.querySelector("#Title").value;
+  let description = document.querySelector("#Description").value;
+  let duedate = document.querySelector('input[type="datetime-local"]').value;
+  let prioritySelector = document.querySelector("#Priority");
+  let priority = prioritySelector.options[prioritySelector.selectedIndex].text;
   // let checklist = document.querySelector("#ul").value;
 
-  // Title = title;
-  // Description = description;
-  // DueDate = duedate;
-  // Priority = priority;
+  Title = title;
+  Description = description;
+  DueDate = duedate;
+  Priority = priority;
   // Checklist = checklist;
 
   console.log({ Title, Description, DueDate, Priority, Checklist });

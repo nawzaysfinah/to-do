@@ -136,17 +136,12 @@ export function addChecklist() {
 export function submit() {
   alert("submit button works!");
   event.preventDefault();
-  createToDo;
-  console.log("createTodo ran...");
+  createToDo();
+  console.log("createTodo ran in dom-manip...");
   // Reset input to null after submitting to do task
   document.querySelector("#Title").value = null;
   document.querySelector("#Description").value = null;
-  // document.querySelector("#DueDaTe").value = null;
   document.querySelector("#Priority").value = "";
   // document.querySelector("#texto").value = null;
   // document.querySelector("li").value = null;
 }
-
-// export function resetPriority() {
-//   var dropDown = document.getElementById();
-// }
