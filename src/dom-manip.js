@@ -1,5 +1,5 @@
 import { blankProjectLoad } from "./blank-project-load.js";
-import { createToDo } from "./create-to-do.js";
+import { createToDo, render } from "./create-to-do.js";
 
 const contentDiv = document.querySelector(".content");
 
@@ -134,10 +134,10 @@ export function addChecklist() {
 
 // Function for Submit Button
 export function submit() {
-  alert("submit button works!");
+  // alert("submit button works!");
   event.preventDefault();
   createToDo();
-  console.log("createTodo ran in dom-manip...");
+  render();
   // Reset input to null after submitting to do task
   document.querySelector("#Title").value = null;
   document.querySelector("#Description").value = null;

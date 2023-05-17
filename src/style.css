@@ -50,6 +50,17 @@ body {
   margin: 20px;
 }
 
+.entries {
+  display: flex;
+  flex-direction: column;
+}
+
+#todo {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--entry-background);
+}
+
 li {
   display: flex;
   align-items: center;

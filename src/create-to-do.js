@@ -24,6 +24,31 @@ export function createToDo(Title, Description, DueDate, Priority, Checklist) {
 
   // TODO: Remove below two lines of code if array is not needed
   toDoArray.push({ Title, Description, DueDate, Priority, Checklist });
-  console.log(toDoArray);
+  console.log("New object pushed to toDoArray...", toDoArray);
+  render();
   return { Title, Description, DueDate, Priority, Checklist };
+}
+
+export function render() {
+  let entryEL = document.querySelector(".entries");
+  entryEL.innerHTML = "";
+  // console.log(
+  //   `You have a new task titled ${Title.value} that requires you to ${Description.value}. This is of ${Priority} importance and must be done by ${DueDate}`
+  // );
+  for (let i = 0; i < toDoArray.length; i++) {
+    let toDo = toDoArray[i];
+    let toDoEL = document.createElement("div");
+    toDoEL.setAttribute("id", "todo");
+    toDoEL.setAttribute("class", "todo-card");
+    toDoEL.innerHTML = `
+    <div class="card-header">
+      <h3 class="title">${toDo.Title}</h3><br>
+      <h5 class="description">${toDo.Description}</h5><br>
+    </div>
+      <div class="card-body">
+        <p>${toDo.DueDate}</p><br>
+        <p>${toDo.Priority}</p><br>
+      </div>`;
+    entryEL.appendChild(toDoEL);
+  }
 }
