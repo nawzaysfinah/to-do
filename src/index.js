@@ -26,5 +26,5 @@ const myToDo2 = createToDo(
   "Medium",
   "Work on the To-Do List App"
 );
-console.log("Show me the properties on myToDo from index.js ...", myToDo);
-console.log("Show me the properties on myToDo2 from index.js ...", myToDo2);
+// console.log("Show me the properties on myToDo from index.js ...", myToDo);
+// console.log("Show me the properties on myToDo2 from index.js ...", myToDo2);
