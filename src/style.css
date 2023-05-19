@@ -74,11 +74,19 @@ body {
 }
 
 /* Body */
+/* navbar */
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
+.search {
+  display: flex;
+  float: right;
+  align-items: flex-end;
+}
+
 
 #newToDo {
   display: flex;

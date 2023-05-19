@@ -8,9 +8,7 @@ export function initialdomManip() {
   // DOM for the Heading
   const btn_newToDo = document.createElement("button");
   btn_newToDo.setAttribute("id", "newToDo");
-
   btn_newToDo.textContent = "☑️";
-  btn_newToDo.addEventListener("click", newToDo);
 
   menu.appendChild(btn_newToDo);
 }
