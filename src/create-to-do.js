@@ -29,12 +29,14 @@ export function createToDo(Title, Description, DueDate, Priority, Checklist) {
   return { Title, Description, DueDate, Priority, Checklist };
 }
 
+// Factory function to render to page
 export function render() {
-  let entryEL = document.querySelector(".entries");
+  let entryEL = document.querySelector(".main");
   entryEL.innerHTML = "";
   // console.log(
   //   `You have a new task titled ${Title.value} that requires you to ${Description.value}. This is of ${Priority} importance and must be done by ${DueDate}`
   // );
+
   for (let i = 0; i < toDoArray.length; i++) {
     let toDo = toDoArray[i];
     let toDoEL = document.createElement("div");
@@ -42,13 +44,11 @@ export function render() {
     toDoEL.setAttribute("class", "todo-card");
     toDoEL.innerHTML = `
     <div class="card-header">
-      <h3 class="title">${toDo.Title}</h3><br>
-      <h5 class="description">${toDo.Description}</h5><br>
-    </div>
-      <div class="card-body">
-        <p>${toDo.DueDate}</p><br>
-        <p>${toDo.Priority}</p><br>
-      </div>`;
+      <h5 class="title">${toDo.Title}</h5>
+      <p>${toDo.DueDate.toLocaleString()}</p>
+      <p>${toDo.Priority}</p>
+      <button class="remove-btn" id="remove-btn">❌</button>
+    </div>`;
     entryEL.appendChild(toDoEL);
   }
 }

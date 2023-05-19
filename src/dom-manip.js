@@ -1,25 +1,25 @@
 import { blankProjectLoad } from "./blank-project-load.js";
 import { createToDo, render } from "./create-to-do.js";
 
-const contentDiv = document.querySelector(".content");
-
 // DOM manipulation to display the initial UI
 export function initialdomManip() {
+  const menu = document.querySelector(".menu");
+
   // DOM for the Heading
-  const heading = document.createElement("h1");
   const btn_newToDo = document.createElement("button");
   btn_newToDo.setAttribute("id", "newToDo");
 
-  btn_newToDo.textContent = "☑️ add new task";
+  btn_newToDo.textContent = "☑️";
   btn_newToDo.addEventListener("click", newToDo);
 
-  heading.textContent = "To Do 📒";
-  contentDiv.appendChild(heading);
-  contentDiv.appendChild(btn_newToDo);
+  menu.appendChild(btn_newToDo);
 }
 
 // DOM for pop-up for adding newToDo
 export function newToDo() {
+  //  define menu
+  const menu = document.querySelector(".menu");
+
   //   DOM for the default project load
   const entryDiv = document.createElement("div");
   entryDiv.setAttribute("id", "entry");
@@ -33,6 +33,7 @@ export function newToDo() {
   projectsInfoDiv.textContent = blankProjectLoad().projectTitle;
   var title = document.createElement("input");
   title.setAttribute("type", "text");
+  title.setAttribute("pattern", "[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}");
   title.setAttribute("id", "Title");
   title.setAttribute("name", "Title");
   title.setAttribute("placeholder", "what are we doing?");
@@ -79,11 +80,13 @@ export function newToDo() {
   var btn_addItem = document.createElement("button");
   btn_addItem.textContent = "Add to checklist!";
   btn_addItem.setAttribute("id", "addItem");
+
   // create input field
   var addInput = document.createElement("input");
   addInput.setAttribute("type", "text");
   addInput.setAttribute("id", "texto");
   addInput.setAttribute("placeholder", "add checkbox item");
+
   // create a ul for things to live in
   var ul = document.createElement("ul");
   ul.setAttribute("id", "ul");
@@ -102,7 +105,7 @@ export function newToDo() {
   entryDiv.appendChild(btn_submit);
 
   // append entry entryDiv to contentDiv
-  contentDiv.appendChild(entryDiv);
+  menu.appendChild(entryDiv);
 }
 
 // DOM Manipulation to addCheckList
