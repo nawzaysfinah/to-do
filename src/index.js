@@ -15,5 +15,3 @@ initialdomManip();
 const btn_newToDo = document.getElementById("newToDo");
 btn_newToDo.addEventListener("click", newToDo);
 
-const btn_addItem = document.getElementById("addItem");
-btn_addItem.addEventListener("click", addChecklist);

@@ -33,9 +33,6 @@ export function createToDo(Title, Description, DueDate, Priority, Checklist) {
 export function render() {
   let entryEL = document.querySelector(".main");
   entryEL.innerHTML = "";
-  // console.log(
-  //   `You have a new task titled ${Title.value} that requires you to ${Description.value}. This is of ${Priority} importance and must be done by ${DueDate}`
-  // );
 
   for (let i = 0; i < toDoArray.length; i++) {
     let toDo = toDoArray[i];
