@@ -39,10 +39,17 @@ button.active:hover {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   padding: 40px 16px;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: antiquewhite;
 }
 
 .todos {
